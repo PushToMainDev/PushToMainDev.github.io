@@ -4,22 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Push To Main Dev</title>
-<meta name="description" content="Push To Main Dev builds web and mobile apps, including Kin Kitchen and My Concept Cloud.">
+<meta name="description" content="Push To Main Dev builds mobile and web apps, including Kin Kitchen and My Concept Cloud.">
 <meta property="og:title" content="Push To Main Dev">
-<meta property="og:description" content="Building, breaking, learning, and shipping.">
+<meta property="og:description" content="Mobile and web apps built to be trusted.">
 <link rel="icon" href="/assets/img/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="shell nav-wrap">
-    <a class="brand" href="/"><span class="prompt">&gt;_</span> Push To Main Dev</a>
+    <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
     <nav aria-label="Main navigation">
-      <a href="#projects">Projects</a>
+      <a href="#products">Products</a>
+      <a href="#approach">Approach</a>
       <a href="#about">About</a>
-      <a href="https://pushtomaindev.github.io/development-blog/">Blog</a>
     </nav>
   </div>
 </header>
@@ -27,131 +30,173 @@
 <main>
   <section class="hero">
     <div class="shell">
-      <p class="eyebrow">&gt;_ push to main dev</p>
-      <h1>Building, breaking,<br><span>learning, shipping.</span></h1>
+      <p class="eyebrow">Mobile and web software</p>
+      <h1>Apps people trust with their families, their work and their ideas.</h1>
       <p class="hero-copy">
-        Push To Main Dev designs, builds and maintains web and mobile apps,
-        from the first concept to a working product.
+        Push To Main Dev designs, builds and runs native mobile and web
+        applications, from the first sketch through launch and every
+        release after.
       </p>
       <div class="hero-actions">
-        <a class="button primary" href="#projects">See the projects</a>
-        <a class="button" href="https://pushtomaindev.github.io/development-blog/">Read the dev blog</a>
+        <a class="button primary" href="#products">Explore our products</a>
+        <a class="button" href="/kinkitchen/">Meet Kin Kitchen</a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="projects">
+  <section class="section alt" id="products">
     <div class="shell">
       <div class="section-head">
-        <p class="section-label">&gt;_ what we're building</p>
-        <h2>Projects</h2>
+        <p class="eyebrow">Products</p>
+        <h2>Software we build and run</h2>
+        <p>Each product is designed, engineered and supported in house.</p>
       </div>
 
       <a class="featured" href="/kinkitchen/">
         <div class="featured-art">
-          <img src="/assets/img/kinkitchen-logo.png" alt="Kin Kitchen logo" width="450" height="300">
+          <img src="/assets/img/kinkitchen-logo.png" alt="Kin Kitchen" width="420" height="280">
         </div>
         <div class="featured-body">
           <div class="card-top">
-            <span class="prompt">&gt;_ featured</span>
-            <span class="status">In development</span>
+            <span class="platforms">iOS · Android</span>
+            <span class="status">Coming soon</span>
           </div>
           <h3>Kin Kitchen</h3>
           <p>
-            Recipe sharing and gathering planning for families, friends and
-            communities, built around everyone's allergies and dietary needs.
-            Plan a potluck or a Meal Train, keep cookbooks, and share with the
-            people you cook for.
+            Recipe sharing and gathering planning for families and communities,
+            built around everyone's allergies and dietary needs.
           </p>
-          <div class="tag-row">
-            <span class="tag">iOS</span>
-            <span class="tag">Android</span>
-            <span class="tag">SwiftUI</span>
-            <span class="tag">Supabase</span>
-          </div>
+          <ul class="points">
+            <li>Allergen and diet tags on every recipe</li>
+            <li>Potlucks, holidays and Meal Trains</li>
+            <li>Cookbooks, Chef Pages and a friends-only feed</li>
+          </ul>
           <span class="card-link">Learn more &rarr;</span>
         </div>
       </a>
 
-      <div class="project-grid">
-        <a class="project-card" href="https://myconcept.cloud/">
+      <div class="product-grid">
+        <a class="product-card" href="https://myconcept.cloud/">
           <div class="card-top">
-            <span class="prompt">&gt;_</span>
-            <span class="status">Beta</span>
+            <span class="platforms">Web</span>
+            <span class="status live">Beta</span>
           </div>
           <h3>My Concept Cloud</h3>
           <p>
-            A web app that helps storytellers capture ideas, organize concepts
-            and grow them into larger stories and projects.
+            A workspace for storytellers to capture ideas, organize concepts
+            and develop them into full stories and projects.
           </p>
-          <div class="tag-row"><span class="tag">Web</span></div>
-          <span class="card-link">myconcept.cloud &rarr;</span>
+          <span class="card-link">Visit myconcept.cloud &rarr;</span>
         </a>
 
-        <div class="project-card">
+        <div class="product-card">
           <div class="card-top">
-            <span class="prompt">&gt;_</span>
+            <span class="platforms">iOS · Android</span>
             <span class="status">In development</span>
           </div>
           <h3>Time Segment Calculator</h3>
           <p>
-            A stopwatch and calculator for people who log work in segments,
-            with count-based rounding for shift workers, drivers and field techs.
+            Time tracking for shift workers, drivers and field techs who log
+            work in segments, with count-based rounding and a full history
+            for audits.
           </p>
-          <div class="tag-row">
-            <span class="tag">React Native</span>
-            <span class="tag">Expo</span>
-          </div>
         </div>
 
-        <a class="project-card" href="https://pushtomaindev.github.io/development-blog/products/curiosprite/">
+        <div class="product-card">
           <div class="card-top">
-            <span class="prompt">&gt;_</span>
-            <span class="status concept">Concept</span>
+            <span class="platforms">Hardware · Software</span>
+            <span class="status">Planned</span>
           </div>
           <h3>CurioSprite</h3>
           <p>
-            A planned open-source handheld for learning how games work by
-            making, testing, playing and sharing your own.
+            An open handheld platform for making, playing and sharing games,
+            all on one device.
           </p>
-          <div class="tag-row">
-            <span class="tag">Open hardware</span>
-            <span class="tag">Raspberry Pi</span>
-          </div>
-          <span class="card-link">Read the plan &rarr;</span>
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="shell narrow prose">
+  <section class="section" id="approach">
+    <div class="shell">
       <div class="section-head">
-        <p class="section-label">&gt;_ about</p>
-        <h2>Push To Main Dev</h2>
+        <p class="eyebrow">Approach</p>
+        <h2>How we build</h2>
       </div>
-      <p>
-        Push To Main Dev was started by Greg Hudler during the final months of his
-        degree in Mobile Development. It's the home for every app we build.
-      </p>
-      <p>
-        The <a class="prompt" href="https://pushtomaindev.github.io/development-blog/">development blog</a>
-        follows each product as it's built: the progress, the problems,
-        the fixes and what we learned along the way.
-      </p>
+      <div class="principles">
+        <div>
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Private by design</h3>
+          <p>Access rules live in the database, not just the app. People see
+          only what they're meant to see.</p>
+        </div>
+        <div>
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>Native on every platform</h3>
+          <p>SwiftUI on iPhone and native Android, so each app looks and
+          feels at home on the device in your hand.</p>
+        </div>
+        <div>
+          <div class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Tested before it ships</h3>
+          <p>Automated tests and regression checks run on every release, so
+          updates add features without breaking what people rely on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="about">
+    <div class="shell about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>An independent software studio</h2>
+      </div>
+      <div>
+        <p>
+          Push To Main Dev was founded by Greg Hudler to build focused,
+          well-made software for everyday life: tools for families, working
+          people and creators.
+        </p>
+        <p>
+          We own our products end to end, from design and engineering to
+          infrastructure and support, and we keep improving them long after
+          launch.
+        </p>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  <div class="shell footer-wrap">
-    <span><span class="prompt">&gt;_</span> &copy; <span id="year">2026</span> Push To Main Dev</span>
-    <div class="footer-links">
-      <a href="/kinkitchen/">Kin Kitchen</a>
-      <a href="https://pushtomaindev.github.io/development-blog/">Blog</a>
-      <a href="https://github.com/PushToMainDev">GitHub</a>
+  <div class="shell footer-grid">
+    <div>
+      <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
+      <p>Mobile and web apps built to be trusted.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/kinkitchen/">Kin Kitchen</a></li>
+        <li><a href="https://myconcept.cloud/">My Concept Cloud</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://pushtomaindev.github.io/development-blog/">Engineering blog</a></li>
+        <li><a href="https://github.com/PushToMainDev">GitHub</a></li>
+      </ul>
     </div>
   </div>
+  <div class="shell footer-base">&copy; <span id="year">2026</span> Push To Main Dev. All rights reserved.</div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
