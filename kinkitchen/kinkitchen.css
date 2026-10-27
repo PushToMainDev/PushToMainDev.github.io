@@ -1,0 +1,87 @@
+/* Kin Kitchen colors, from the iOS app's asset catalog */
+:root {
+  --kk-bg: #f8efe3;
+  --kk-surface: #fffaf3;
+  --kk-text: #2b2118;
+  --kk-muted: #6f6257;
+  --kk-line: #e7d9c6;
+  --kk-primary: #b70816;
+  --kk-accent: #ffc72c;
+  --kk-max: 1080px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kk-bg: #1d1915;
+    --kk-surface: #26211c;
+    --kk-text: #f4ece2;
+    --kk-muted: #b9ab9c;
+    --kk-line: #3a322a;
+    --kk-primary: #e0353f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--kk-bg); color: var(--kk-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.kk-shell { width: min(calc(100% - 32px), var(--kk-max)); margin-inline: auto; }
+
+.kk-header { border-bottom: 1px solid var(--kk-line); }
+.kk-nav { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.kk-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.1rem; }
+.kk-brand img { border-radius: 9px; }
+.kk-by { color: var(--kk-muted); font-size: .9rem; }
+.kk-by span { font-family: ui-monospace, Menlo, monospace; }
+.kk-by:hover { color: var(--kk-text); }
+
+.kk-hero { padding: 72px 0; }
+.kk-hero-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.kk-eyebrow { color: var(--kk-primary); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; margin: 0; }
+.kk-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05; letter-spacing: -.03em; margin: 12px 0 18px; }
+.kk-lede { color: var(--kk-muted); font-size: 1.15rem; max-width: 560px; }
+.kk-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 28px; }
+.kk-button {
+  display: inline-block; padding: 13px 20px; border-radius: 12px; font-weight: 700;
+  background: var(--kk-primary); color: #fff; border: 2px solid var(--kk-primary);
+}
+[hidden] { display: none !important; }
+.kk-secondary { background: transparent; color: var(--kk-primary); }
+.kk-soon {
+  padding: 11px 16px; border-radius: 12px; font-weight: 600;
+  background: var(--kk-accent); color: #2b2118;
+}
+.kk-logo { justify-self: center; }
+
+.kk-section { padding: 64px 0 80px; border-top: 1px solid var(--kk-line); }
+.kk-section h2 { font-size: 2rem; letter-spacing: -.02em; margin: 0 0 28px; }
+.kk-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.kk-features article {
+  background: var(--kk-surface); border: 1px solid var(--kk-line); border-radius: 16px; padding: 24px;
+  border-top: 4px solid var(--kk-accent);
+}
+.kk-features h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.kk-features p { margin: 0; color: var(--kk-muted); }
+
+.kk-footer { border-top: 1px solid var(--kk-line); color: var(--kk-muted); }
+.kk-footer-wrap { min-height: 90px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 20px 0; }
+.kk-footer a:hover { color: var(--kk-text); }
+
+/* Shared-link page (served from /404.html for /kinkitchen/recipe|post|chef/<id>) */
+.kk-share { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 16px; }
+.kk-share main { max-width: 420px; text-align: center; }
+.kk-share img { margin: 0 auto 16px; border-radius: 22px; }
+.kk-share h1 { font-size: 1.8rem; margin: 0 0 8px; }
+.kk-share p { color: var(--kk-muted); }
+.kk-share .kk-button, .kk-share .kk-soon { display: block; margin: 12px 0; }
+
+@media (max-width: 860px) {
+  .kk-hero-grid { grid-template-columns: 1fr; }
+  .kk-logo { max-width: 320px; }
+  .kk-features { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .kk-hero { padding: 48px 0; }
+}

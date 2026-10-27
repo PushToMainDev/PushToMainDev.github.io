@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kin Kitchen</title>
+<meta name="description" content="Kin Kitchen: share recipes and plan gatherings around everyone's allergies and dietary needs.">
+<meta property="og:title" content="Kin Kitchen">
+<meta property="og:description" content="Safe and fun cookouts and recipe sharing.">
+<meta property="og:image" content="https://pushtomaindev.com/assets/img/kinkitchen-icon.png">
+<!-- Once the app is live, uncomment and put in the number from its App Store link:
+<meta name="apple-itunes-app" content="app-id=APP_STORE_ID"> -->
+<link rel="icon" type="image/png" href="/assets/img/kinkitchen-icon.png">
+<link rel="apple-touch-icon" href="/assets/img/kinkitchen-icon.png">
+<link rel="stylesheet" href="/kinkitchen/kinkitchen.css">
+</head>
+<body>
+
+<header class="kk-header">
+  <div class="kk-shell kk-nav">
+    <a class="kk-brand" href="/kinkitchen/">
+      <img src="/assets/img/kinkitchen-icon.png" alt="" width="36" height="36"> Kin Kitchen
+    </a>
+    <a class="kk-by" href="/">by <span>&gt;_</span> Push To Main Dev</a>
+  </div>
+</header>
+
+<main>
+  <section class="kk-hero">
+    <div class="kk-shell kk-hero-grid">
+      <div>
+        <p class="kk-eyebrow">Coming soon to iPhone and Android</p>
+        <h1>Cook for the people you love. Safely.</h1>
+        <p class="kk-lede">
+          Kin Kitchen is the place to share recipes and plan gatherings with
+          family and friends, with everyone's allergies, restrictions and
+          preferences right where you need them.
+        </p>
+        <div class="kk-actions">
+          <a class="kk-button" id="store" hidden>Get it on the App Store</a>
+          <span class="kk-soon" id="soon">In development. Follow along on the blog.</span>
+          <a class="kk-button kk-secondary" href="https://pushtomaindev.github.io/development-blog/products/kin-kitchen/">Development blog</a>
+        </div>
+      </div>
+      <img class="kk-logo" src="/assets/img/kinkitchen-logo.png" alt="Kin Kitchen logo" width="480" height="320">
+    </div>
+  </section>
+
+  <section class="kk-section">
+    <div class="kk-shell">
+      <h2>Everything for the table</h2>
+      <div class="kk-features">
+        <article>
+          <h3>Recipes that know who's eating</h3>
+          <p>Tag allergens and diets like vegan or halal. Add your own allergies,
+          restrictions and preferences so they show up everywhere you cook.</p>
+        </article>
+        <article>
+          <h3>Gatherings and Meal Trains</h3>
+          <p>Plan a backyard BBQ, potluck, holiday dinner or a Meal Train for a
+          family that needs it. Guests claim dishes, and everyone sees the
+          dietary needs up front.</p>
+        </article>
+        <article>
+          <h3>Cookbooks</h3>
+          <p>Gather recipes into cookbooks with your own sections and order,
+          and feature the favorites. Keep them for the family or share them.</p>
+        </article>
+        <article>
+          <h3>Make it your own</h3>
+          <p>Save a recipe someone shared, or make your own version of it. The
+          original cook always keeps the credit.</p>
+        </article>
+        <article>
+          <h3>Table Talk</h3>
+          <p>A friends-only feed for what you're cooking. Post a photo, link a
+          recipe, and trade Yums and comments.</p>
+        </article>
+        <article>
+          <h3>Chef Pages</h3>
+          <p>Show off your cookbook shelf and let people follow along. Earn the
+          Verified Community Chef badge once 100 people have rated your recipes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="kk-footer">
+  <div class="kk-shell kk-footer-wrap">
+    <span>&copy; <span id="year">2026</span> Push To Main Dev</span>
+    <a href="/">More from Push To Main Dev</a>
+  </div>
+</footer>
+
+<script src="/kinkitchen/app-store.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  if (KK_APP_STORE_ID) {
+    var store = document.getElementById('store');
+    store.href = 'https://apps.apple.com/app/id' + KK_APP_STORE_ID;
+    store.hidden = false;
+    document.getElementById('soon').hidden = true;
+  }
+</script>
+</body>
+</html>
