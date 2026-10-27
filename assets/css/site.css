@@ -156,3 +156,10 @@ a.product-card:hover { border-color: var(--muted); }
   .section { padding: 64px 0; }
   .featured-body { padding: 24px; }
 }
+
+/* Platform line under a product card's description */
+.product-card p.platforms { margin: 0 0 16px; font-size: .85rem; }
+.product-card .card-top { align-items: flex-start; }
+.app-icon { width: 56px; height: 56px; border-radius: 13px; }
+.app-icon.tile { display: grid; place-items: center; background: #111827; }
+.app-icon.tile img { width: 40px; height: auto; }
