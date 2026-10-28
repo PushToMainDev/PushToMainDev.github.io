@@ -4,69 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not found · Push To Main Dev</title>
-<!--
-  GitHub Pages can't rewrite URLs, so shared Kin Kitchen links
-  (/kinkitchen/recipe/<id>, /post/<id>, /chef/<id>) land here. With the app
-  installed, iOS opens them in the app before this page ever loads. Without
-  it, the script below swaps in the "get the app" page.
--->
+<script>
+  // Older Kin Kitchen links used /kinkitchen/recipe/<id> (or post, chef).
+  // Send them to the current form, /kinkitchen/?recipe=<id>.
+  var parts = location.pathname.split('/').filter(Boolean);
+  if (parts[0] === 'kinkitchen' && ['recipe', 'post', 'chef'].indexOf(parts[1]) !== -1 && parts[2]) {
+    location.replace('/kinkitchen/?' + parts[1] + '=' + encodeURIComponent(parts[2]));
+  }
+</script>
 <link rel="icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
 
-<div id="not-found">
-  <header class="site-header">
-    <div class="shell nav-wrap">
-      <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
-    </div>
-  </header>
-  <main class="hero">
-    <div class="shell">
-      <p class="eyebrow">404</p>
-      <h1>Page not found</h1>
-      <p class="hero-copy">That page doesn't exist, or it moved.</p>
-      <div class="hero-actions"><a class="button primary" href="/">Go home</a></div>
-    </div>
-  </main>
-</div>
-
-<template id="kk-shared">
-  <div class="kk-share">
-    <main>
-      <img src="/assets/img/kinkitchen-icon.png" alt="" width="96" height="96">
-      <h1>Kin Kitchen</h1>
-      <p>Someone shared something from Kin Kitchen with you: a recipe, a Table Talk post or a Chef Page.</p>
-      <a class="kk-button" id="store" hidden>Get Kin Kitchen on the App Store</a>
-      <span class="kk-soon" id="soon">Kin Kitchen is coming soon to the App Store.</span>
-      <a class="kk-button kk-secondary" id="open" href="#">I have the app, open it</a>
-      <p>Already have it? Links like this open right in the app.</p>
-      <p><a href="/kinkitchen/">About Kin Kitchen</a></p>
-    </main>
+<header class="site-header">
+  <div class="shell nav-wrap">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
   </div>
-</template>
+</header>
+<main class="hero">
+  <div class="shell">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p class="hero-copy">That page doesn't exist, or it moved.</p>
+    <div class="hero-actions"><a class="button primary" href="/">Go home</a></div>
+  </div>
+</main>
 
-<script src="/kinkitchen/app-store.js"></script>
-<script>
-  // /kinkitchen/recipe/<id> → kinkitchen://recipe/<id>
-  var parts = location.pathname.split('/').filter(Boolean);
-  if (parts[0] === 'kinkitchen' && ['recipe', 'post', 'chef'].indexOf(parts[1]) !== -1 && parts[2]) {
-    document.title = 'Kin Kitchen';
-    var css = document.createElement('link');
-    css.rel = 'stylesheet';
-    css.href = '/kinkitchen/kinkitchen.css';
-    document.head.appendChild(css);
-    document.querySelector('link[rel=icon]').href = '/assets/img/kinkitchen-icon.png';
-    document.body.replaceChildren(document.getElementById('kk-shared').content);
-
-    document.getElementById('open').href = 'kinkitchen://' + parts[1] + '/' + encodeURIComponent(parts[2]);
-    if (KK_APP_STORE_ID) {
-      var store = document.getElementById('store');
-      store.href = 'https://apps.apple.com/app/id' + KK_APP_STORE_ID;
-      store.hidden = false;
-      document.getElementById('soon').hidden = true;
-    }
-  }
-</script>
 </body>
 </html>

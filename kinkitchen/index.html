@@ -7,9 +7,9 @@
 <meta name="description" content="Kin Kitchen: share recipes and plan gatherings around everyone's allergies and dietary needs.">
 <meta property="og:title" content="Kin Kitchen">
 <meta property="og:description" content="Safe and fun cookouts and recipe sharing.">
-<meta property="og:image" content="https://pushtomaindev.com/assets/img/kinkitchen-icon.png">
-<!-- Once the app is live, uncomment and put in the number from its App Store link:
-<meta name="apple-itunes-app" content="app-id=APP_STORE_ID"> -->
+<meta property="og:image" content="https://pushtomain.dev/assets/img/kinkitchen-icon.png">
+<!-- Shows "Open" or "Get" for the app at the top of Safari. Same number as in app-store.js. -->
+<meta name="apple-itunes-app" content="app-id=6823457359">
 <link rel="icon" type="image/png" href="/assets/img/kinkitchen-icon.png">
 <link rel="apple-touch-icon" href="/assets/img/kinkitchen-icon.png">
 <link rel="stylesheet" href="/kinkitchen/kinkitchen.css">
@@ -93,9 +93,41 @@
   </div>
 </footer>
 
+<!-- Shared links (/kinkitchen/?recipe=<id>, ?post=, ?chef=) open in the app
+     when it's installed. Without it, this replaces the page. -->
+<template id="kk-shared">
+  <div class="kk-share">
+    <main>
+      <img src="/assets/img/kinkitchen-icon.png" alt="" width="96" height="96">
+      <h1>Kin Kitchen</h1>
+      <p>Someone shared something from Kin Kitchen with you: a recipe, a Table Talk post or a Chef Page.</p>
+      <a class="kk-button" id="store" hidden>Get Kin Kitchen on the App Store</a>
+      <span class="kk-soon" id="soon">Kin Kitchen is coming soon to the App Store.</span>
+      <a class="kk-button kk-secondary" id="open" href="#">I have the app, open it</a>
+      <p>Already have it? Links like this open right in the app.</p>
+      <p><a href="/kinkitchen/">About Kin Kitchen</a></p>
+    </main>
+  </div>
+</template>
+
 <script src="/kinkitchen/app-store.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ?recipe=<id> (or post, chef) → kinkitchen://recipe/<id>
+  var params = new URLSearchParams(location.search);
+  var target = null;
+  ['recipe', 'post', 'chef'].forEach(function (kind) {
+    var id = params.get(kind);
+    if (!target && id && /^[0-9a-fA-F-]{36}$/.test(id)) {
+      target = kind + '/' + id;
+    }
+  });
+  if (target) {
+    document.body.replaceChildren(document.getElementById('kk-shared').content);
+    document.getElementById('open').href = 'kinkitchen://' + target;
+  }
+
   if (KK_APP_STORE_ID) {
     var store = document.getElementById('store');
     store.href = 'https://apps.apple.com/app/id' + KK_APP_STORE_ID;

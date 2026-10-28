@@ -4,9 +4,9 @@
       {
         "appIDs": ["8ZRSTMT3YX.com.pushtomaindev.KinKitchen"],
         "components": [
-          { "/": "/kinkitchen/recipe/*", "comment": "A recipe" },
-          { "/": "/kinkitchen/post/*", "comment": "A Table Talk post" },
-          { "/": "/kinkitchen/chef/*", "comment": "A member's profile or Chef Page" }
+          { "/": "/kinkitchen/", "?": { "recipe": "?*" }, "comment": "A recipe" },
+          { "/": "/kinkitchen/", "?": { "post": "?*" }, "comment": "A Table Talk post" },
+          { "/": "/kinkitchen/", "?": { "chef": "?*" }, "comment": "A member's profile or Chef Page" }
         ]
       }
     ]
