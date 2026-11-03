@@ -175,3 +175,5 @@ a.product-card:hover { border-color: var(--muted); }
 @media (max-width: 420px) {
   nav a[href$="#approach"] { display: none; }
 }
+.card-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: auto; }
+.card-links a:hover { text-decoration: underline; }
