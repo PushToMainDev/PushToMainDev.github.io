@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CurioSprite · Push To Main Dev</title>
+<meta name="description" content="CurioSprite: make and play your own pixel-art games, right in the browser.">
+<meta property="og:title" content="CurioSprite">
+<meta property="og:description" content="Make and play your own pixel-art games.">
+<link rel="icon" type="image/svg+xml" href="/assets/img/curiosprite-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="shell nav-wrap">
+    <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
+    <nav aria-label="Main navigation">
+      <a href="/#products">Products</a>
+      <a href="/#approach">Approach</a>
+      <a href="/#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section game-page">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">CurioSprite</p>
+      <h2>Make and play your own pixel-art games</h2>
+      <p>A game maker for kids that runs right in the browser.</p>
+    </div>
+
+    <div class="game-frame">
+      <iframe src="https://curiosprite.pushtomain.dev/" title="CurioSprite"
+        allow="fullscreen; gamepad" allowfullscreen></iframe>
+    </div>
+    <p class="game-note">
+      Click the game first so it can hear the keyboard.
+      <a href="https://curiosprite.pushtomain.dev" target="_blank" rel="noopener">Open full screen &#8599;</a>
+    </p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <a class="brand" href="/"><span class="mark" aria-hidden="true">&gt;_</span> Push To Main Dev</a>
+      <p>Mobile and web apps built to be trusted.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/kinkitchen/">Kin Kitchen</a></li>
+        <li><a href="https://myconcept.cloud/">My Concept Cloud</a></li>
+        <li><a href="/curiosprite/">CurioSprite</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/#about">About</a></li>
+        <li><a href="https://pushtomaindev.github.io/development-blog/">Engineering blog</a></li>
+        <li><a href="https://github.com/PushToMainDev">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="shell footer-base">&copy; <span id="year">2026</span> Push To Main Dev. All rights reserved.</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
